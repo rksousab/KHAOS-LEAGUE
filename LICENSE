@@ -1,0 +1,41 @@
+Khaos League Championship - CFO
+Copyright (c) 2026 Ronie Khaos Sousa Barbosa. Todos os direitos reservados.
+
+Este repositório é público apenas para a hospedagem do site no GitHub Pages.
+Ele não é software livre nem de código aberto.
+
+
+1. O QUE PERTENCE AO TITULAR
+
+O código-fonte do site (index.html e os arquivos das pastas assets/css e
+assets/js, exceto o conteúdo indicado no item 2), o projeto visual, os textos
+da interface e o emblema (assets/img/emblema.svg) pertencem a
+Ronie Khaos Sousa Barbosa.
+
+É proibido copiar, modificar, redistribuir, publicar ou usar comercialmente
+esse material, no todo ou em parte, sem autorização prévia e por escrito do
+titular. A proteção segue a Lei nº 9.609/1998 (programas de computador) e a
+Lei nº 9.610/1998 (direitos autorais) e não depende de registro.
+
+Visitar o site e usá-lo para estudar é livre.
+
+
+2. O QUE NÃO PERTENCE AO TITULAR
+
+a) As questões, os gabaritos e os textos das provas reproduzidos em
+   assets/js/banco-questoes.js pertencem aos respectivos titulares (a banca
+   organizadora e os autores citados em cada questão).
+
+b) Firebase JavaScript SDK (arquivos firebase-*.js em assets/vendor/):
+   Copyright Google LLC, Apache License 2.0.
+   Texto da licença em assets/vendor/LICENCA-FIREBASE.txt.
+
+c) Fontes Big Shoulders, Big Shoulders Stencil e Public Sans (assets/fonts/):
+   SIL Open Font License 1.1.
+   Texto da licença em assets/fonts/LICENCA-FONTES.txt.
+
+
+3. AUTORIZAÇÕES
+
+Pedidos de autorização de uso devem ser feitos ao titular, pelo perfil no
+GitHub em que este repositório está publicado.

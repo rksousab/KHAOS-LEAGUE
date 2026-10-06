@@ -1,0 +1,57 @@
+rules_version = '2';
+
+// Khaos League Championship - CFO
+// Regras de segurança do Cloud Firestore.
+// Cole este conteúdo em: Firebase Console > Firestore Database > Regras > Publicar.
+//
+//   usuarios/{uid}  -> progresso de cada pessoa. Só o dono lê e grava.
+//   ranking/{uid}   -> placar. Qualquer pessoa logada lê; cada um só grava a própria linha.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function logado() {
+      return request.auth != null;
+    }
+
+    function dono(uid) {
+      return logado() && request.auth.uid == uid;
+    }
+
+    // Opcional: para o banco aceitar só contas @gmail.com, acrescente a condição abaixo
+    // logo depois de "request.auth != null" na função logado():
+    //   && request.auth.token.email.matches('.*@gmail[.]com$')
+
+    match /usuarios/{uid} {
+      allow read, write: if dono(uid);
+    }
+
+    match /ranking/{uid} {
+      allow read: if logado();
+      allow delete: if dono(uid);
+      allow create, update: if dono(uid)
+        && request.resource.data.keys().hasOnly(['nome', 'pontos', 'resp', 'ac', 'sim', 't'])
+        && request.resource.data.keys().hasAll(['nome', 'pontos', 'resp', 'ac', 't'])
+        && request.resource.data.nome is string
+        && request.resource.data.nome.size() <= 40
+        && request.resource.data.pontos is int
+        && request.resource.data.pontos >= 0
+        && request.resource.data.pontos <= 1000000
+        && request.resource.data.resp is int
+        && request.resource.data.resp >= 0
+        && request.resource.data.ac is int
+        && request.resource.data.ac >= 0
+        && request.resource.data.ac <= request.resource.data.resp
+        && request.resource.data.t is int
+        && (!('sim' in request.resource.data)
+            || (request.resource.data.sim is int
+                && request.resource.data.sim >= 0
+                && request.resource.data.sim <= 100));
+    }
+
+    // Qualquer outro caminho fica fechado.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

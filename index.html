@@ -1,0 +1,80 @@
+<!doctype html>
+<!-- Khaos League Championship - CFO | Copyright (c) 2026 Ronie Khaos Sousa Barbosa. Todos os direitos reservados. Veja o arquivo LICENSE. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khaos League Championship - CFO</title>
+  <meta name="description" content="Questões das provas do CFO da PMBA e do CBMBA, simulados com relógio e uma liga com classificação e patentes.">
+  <meta name="author" content="Ronie Khaos Sousa Barbosa">
+  <meta name="theme-color" content="#0a3742">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="assets/img/emblema.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/public-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/big-shoulders-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <p id="faixa-demo" class="faixa-demo" hidden>Modo demonstração: contas e respostas ficam guardadas só neste navegador. <a href="#/sobre">Entenda</a></p>
+
+  <header class="topo">
+    <div class="contem topo-dentro">
+      <a class="marca" href="#/inicio" aria-label="Khaos League Championship CFO, página inicial">
+        <svg class="emblema" viewBox="0 0 64 72" aria-hidden="true" focusable="false">
+          <defs><clipPath id="klc-escudo-topo"><path d="M32 4l26 8.5V36c0 16.5-12 27-26 32C18 63 6 52.5 6 36V12.5z"/></clipPath></defs>
+          <path d="M32 2l28 9v25c0 18-13 29-28 34C17 65 4 54 4 36V11z" class="emb-fundo"/>
+          <g clip-path="url(#klc-escudo-topo)">
+            <path d="M8 49l24-18 24 18" class="emb-divisa-1"/>
+            <path d="M8 62l24-18 24 18" class="emb-divisa-2"/>
+          </g>
+          <polygon points="32,10 33.98,15.28 39.61,15.53 35.2,19.03 36.7,24.47 32,21.36 27.3,24.47 28.8,19.03 24.39,15.53 30.02,15.28" class="emb-estrela"/>
+          <path d="M32 2l28 9v25c0 18-13 29-28 34C17 65 4 54 4 36V11z" class="emb-borda"/>
+        </svg>
+        <span class="marca-nome">Khaos League</span>
+        <span class="marca-selo">CFO</span>
+      </a>
+      <button type="button" class="btn-icone btn-icone-claro topo-menu" data-acao="menu" aria-expanded="false" aria-controls="nav">
+        <span class="sr">Abrir o menu</span>
+        <svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav id="nav" class="nav" aria-label="Abas do site"></nav>
+      <div id="topo-conta" class="topo-conta"></div>
+    </div>
+    <div class="fitas" aria-hidden="true"></div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="contem bloco"><p class="carregando">Carregando…</p></section>
+  </main>
+
+  <footer class="rodape">
+    <div class="contem rodape-dentro">
+      <p class="rodape-marca">Khaos League Championship <span>CFO</span></p>
+      <p>Site independente de estudos, sem vínculo com a PMBA, o CBMBA ou a UNEB.</p>
+      <p><a href="#/sobre">Sobre a liga e a pontuação</a></p>
+    </div>
+    <div class="contem">
+      <div class="rodape-direitos">
+        <p class="rodape-titular">© 2026 Ronie Khaos Sousa Barbosa. Todos os direitos reservados.</p>
+        <p>As questões e os textos das provas pertencem aos respectivos titulares.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="avisos" class="avisos" aria-live="polite"></div>
+  <dialog id="dialogo" class="dialogo"></dialog>
+
+  <noscript>
+    <p class="sem-js">Este site precisa de JavaScript para funcionar. Ative o JavaScript no navegador e recarregue a página.</p>
+  </noscript>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/banco-questoes.js"></script>
+  <script src="assets/js/backend.js"></script>
+  <script src="assets/js/nucleo.js"></script>
+  <script src="assets/js/telas.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
